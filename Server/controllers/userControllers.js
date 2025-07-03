@@ -27,7 +27,10 @@ const registerUser = async (req, res) => {
       success: true,
       message: "User registered successfully",
       token,
-      user: { name: user.name },
+      user: {     
+        _id: user._id,
+        name: user.name,
+        email: user.email },
     });
     
   } catch (error) {
@@ -57,7 +60,10 @@ const loginUser = async (req, res) => {
                 success: true,
                 message: "Login successful",
                 token,
-                user: { name: user.name},
+                user: {     
+                  _id: user._id,
+                  name: user.name,
+                  email: user.email},
             });
         }
     }
@@ -79,7 +85,11 @@ const userCredits = async (req, res) => {
     return res.status(200).json({
       success: true,
       credits: user.creditBalance,
-      user: { name: user.name},
+      user: {
+        _id: user._id,       // ✅ include the ID
+        name: user.name,
+        email: user.email    // (optional) include more if needed
+      },
     });
   } catch (error) {
     console.error("Error fetching user credits:", error);

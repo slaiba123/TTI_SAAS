@@ -82,13 +82,12 @@ const plans = [
 ];
 
 export default function BuyCredit() {
-  const { user } = useContext(AppContext);
-
-  const handlePurchase = async (planName) => {
+  const { user } = React.useContext(AppContext);
+  const handlePurchase = async (planName,userId) => {
     try {
       const res = await axios.post('http://localhost:4000/api/payment/create-checkout-session', {
         plan: planName,
-        userId: user._id,
+        userId: userId, // Use user ID if available, otherwise 'unknown'
       });
 
       if (res.data?.url) {
@@ -123,7 +122,7 @@ export default function BuyCredit() {
             <p className="text-2xl font-bold text-gray-800 mb-1">{plan.price}</p>
             <p className="text-sm text-gray-500 mb-6">/ {plan.credits}</p>
             <button
-              onClick={() => handlePurchase(plan.title)}
+              onClick={() => handlePurchase(plan.title,user?._id)}
               className="w-full bg-black text-white py-2 rounded hover:bg-gray-800 transition"
             >
               {user ? 'Purchase' : 'Get started'}

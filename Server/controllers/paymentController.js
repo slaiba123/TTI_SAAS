@@ -9,7 +9,7 @@ console.log("Stripe KEY at controller:", process.env.STRIPE_SECRET_KEY);
 
 export const createCheckoutSession = async (req, res) => {
   const { plan, userId } = req.body;
-
+ console.log("Received plan:", plan, " and userId:", userId);
   const prices = {
     Basic: { amount: 1000, credits: 100 },
     Advanced: { amount: 5000, credits: 500 },
@@ -17,6 +17,7 @@ export const createCheckoutSession = async (req, res) => {
   };
 
   const selected = prices[plan];
+  console.log("Selected plan details:", selected);        
   if (!selected) {
     return res.status(400).json({ success: false, message: 'Invalid plan selected' });
   }
@@ -40,7 +41,7 @@ export const createCheckoutSession = async (req, res) => {
       success_url: 'http://localhost:5173/result',
       cancel_url: 'http://localhost:5173/',
       metadata: {
-        userId: userId || 'unknown',
+        userId: userId,
         credits: selected.credits.toString(), // Store as string for metadata
       },
     });

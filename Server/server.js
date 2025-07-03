@@ -5,14 +5,16 @@ import connectDB from './config/mongodb.js';
 import userRouter from './routes/userRoutes.js';
 import imageRouter from './routes/imageRoutes.js';
 import stripeRoutes from './routes/stripeRoutes.js';
-import webhookRoute from './routes/webhookRoute.js';
+import webhookHandler from './routes/webhookRoute.js';
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 4000;
 
 app.use(cors());
-app.use('/webhook', webhookRoute); 
+
+app.post('/webhook', express.raw({ type: 'application/json' }), webhookHandler);
+
 app.use(express.json());
 
 

@@ -13,6 +13,13 @@ const AppContextProvider = (props) => {
   const [credit, setCredit] = useState(0);
   const backendUrl = import.meta.env.VITE_BACKEND_URL;
   const navigate= useNavigate();
+  useEffect(() => {
+    const savedUser = localStorage.getItem("user");
+    if (savedUser) {
+      setUser(JSON.parse(savedUser));
+    }
+  }, []);
+  
   const loadCreditsData = async () => {
       try{
         const {data}= await axios.get(backendUrl + '/api/user/credits', {headers:{Authorization:`Bearer ${token}`}})
@@ -20,6 +27,7 @@ const AppContextProvider = (props) => {
         if(data.success) {
           setCredit(data.credits);
           setUser(data.user);
+          localStorage.setItem("user", JSON.stringify(data.user));
         }
       }
       catch(err) {
@@ -84,7 +92,8 @@ const AppContextProvider = (props) => {
     setToken(null);
     setCredit(false);
     localStorage.removeItem("token");
-    toast.success("Logged out successfully");
+    localStorage.removeItem("user"); 
+  toast.success("Logged out successfully");
   }     
 
   useEffect(() => {
