@@ -102,7 +102,7 @@ export default function BuyCredit() {
   };
 
   return (
-    <div className="bg-green-50 min-h-screen py-16 px-4 text-center">
+    <div className=" min-h-screen py-16 px-4 text-center">
       <button className="px-5 py-2 border rounded-full text-gray-700 border-gray-300 mb-6 hover:bg-gray-100 transition">
         OUR PLANS
       </button>

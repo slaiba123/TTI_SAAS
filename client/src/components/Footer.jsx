@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Logo & Text */}
         <div className="flex items-center space-x-4 mb-4 sm:mb-0">
           <img src='/favicon.svg' alt="Imagify Logo" className="w-6 h-6" />
-          <span className="text-gray-600 text-sm">
+          <span className="text-white text-sm">
             All right reserved. Copyright ©imagify
           </span>
         </div>

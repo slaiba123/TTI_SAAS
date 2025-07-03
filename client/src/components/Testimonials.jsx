@@ -46,13 +46,13 @@ const Testimonials = () => {
   return (
     <div className="text-center py-20 px-6">
       <h2 className="text-3xl sm:text-4xl font-semibold mb-2">Customer testimonials</h2>
-      <p className="text-gray-500 mb-10">What Our Users Are Saying</p>
+      <p className="text-white mb-10">What Our Users Are Saying</p>
 
       <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 max-w-6xl mx-auto">
         {testimonials.map((user, index) => (
           <div
             key={index}
-            className="flex flex-col items-center text-center p-6 rounded-xl shadow-sm transition-all duration-300 hover:border hover:border-black"
+            className="flex flex-col items-center text-center p-6 rounded-xl shadow-sm transition-all duration-300 border border-black hover:border  hover:border-white "
           >
             <img
               src={user.image}
@@ -60,13 +60,13 @@ const Testimonials = () => {
               className="w-16 h-16 rounded-full object-cover mb-4"
             />
             <h3 className="font-semibold">{user.name}</h3>
-            <p className="text-sm text-gray-500 mb-2">{user.role}</p>
+            <p className="text-sm text-white mb-2">{user.role}</p>
 
             <div className="flex justify-center text-red-500 text-lg mb-4">
               {'★'.repeat(5)}
             </div>
 
-            <p className="text-sm text-gray-600">{user.review}</p>
+            <p className="text-sm text-white">{user.review}</p>
           </div>
         ))}
       </div>

@@ -49,7 +49,7 @@ const Result = () => {
             value={input}
             type="text"
             placeholder="Describe what do you want to generate?"
-            className="flex-1 bg-transparent outline-none ml-8 max-sm:w-20 text-gray-600"
+            className="flex-1 bg-transparent outline-none ml-8 max-sm:w-20 text-gray-200"
           />
           <button
             type="submit"
