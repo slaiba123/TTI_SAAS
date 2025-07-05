@@ -79,7 +79,7 @@
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
         className='text-center mt-2 text-neutral-600'>
-            Generated images from imagify
+            Generated images from Snapverse
         </motion.p>
         </motion.div>
 

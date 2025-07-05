@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between">
         {/* Logo & Text */}
         <div className="flex items-center space-x-4 mb-4 sm:mb-0">
-          <img src='/favicon.svg' alt="Imagify Logo" className="w-6 h-6" />
+          <img src='/favicon.svg' alt="Snapverse Logo" className="w-6 h-6" />
           <span className="text-white text-sm">
-            All right reserved. Copyright ©imagify
+            All right reserved. Copyright ©Snapverse
           </span>
         </div>
 

@@ -11,21 +11,21 @@ const testimonials = [
     role: 'Graphic Designer',
     image: profile3,
     review:
-      "I've been using imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.",
+      "I've been using Snapverse for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.",
   },
   {
     name: 'Richard Nelson',
     role: 'Content Creator',
     image: profile2,
     review:
-      "I've been using imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.",
+      "I've been using Snapverse for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.",
   },
   {
     name: 'James Washington',
     role: 'Co-Founder',
     image: profile1,
     review:
-      "I've been using imagify for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.",
+      "I've been using Snapverse for nearly two years, primarily for Instagram, and it has been incredibly user-friendly, making my work much easier.",
   },
 ];
 
