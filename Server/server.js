@@ -74,7 +74,7 @@ app.use(cors({
     app.use('/api/image', imageRouter);
     app.use('/api/payment', stripeRoutes);
 
-    app.get('/', (req, res) => res.send('API is running'));
+    app.get('/', (req, res) => res.redirect(process.env.FRONTEND_URL));
     app.get('/health', (req, res) => res.status(200).json({ success: true }));
 
     app.listen(PORT, () => {
