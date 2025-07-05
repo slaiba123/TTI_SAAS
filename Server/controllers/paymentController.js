@@ -38,8 +38,8 @@ export const createCheckoutSession = async (req, res) => {
         },
       ],
       mode: 'payment',
-      success_url: 'http://localhost:5173/result',
-      cancel_url: 'http://localhost:5173/',
+      success_url: process.env.FRONTEND_URL + '/result',
+      cancel_url: process.env.FRONTEND_URL + '/',
       metadata: {
         userId: userId,
         credits: selected.credits.toString(), // Store as string for metadata
