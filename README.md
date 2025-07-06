@@ -19,7 +19,16 @@ A full-stack SaaS platform for AI-powered **text-to-image generation**, built wi
 - **Payments:** Stripe API (subscriptions + credits)  
 - **AI API:** CLIPDROP (Text-to-Image API)
 
+## 📽️Demo Video
+
+
+https://github.com/user-attachments/assets/cd697c1a-4b42-47f3-be3c-68f9d7d64cc4
+
+
+
+
 ## 🚀 Getting Started
+
 
 ### 1. Clone the repository
 
