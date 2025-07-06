@@ -1,8 +1,3 @@
-Here’s a complete and copy-paste ready `README.md` file for your **SNAPVERSE** project, fully formatted for GitHub:
-
----
-
-````markdown
 # SNAPVERSE 🖼️
 
 A full-stack SaaS platform for AI-powered **text-to-image generation**, built with the **MERN stack**, **CLIPDROP API**, **Stripe**, **JWT Authentication**, and **Tailwind CSS**. SNAPVERSE enables users to generate visuals from text prompts, manage credits, and access a secure subscription-based experience.
@@ -17,12 +12,21 @@ A full-stack SaaS platform for AI-powered **text-to-image generation**, built wi
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React.js, Tailwind CSS
-- **Backend:** Node.js, Express.js
-- **Database:** MongoDB (with Mongoose)
-- **Authentication:** JWT (JSON Web Tokens)
-- **Payments:** Stripe API (subscriptions + credits)
+- **Frontend:** React.js, Tailwind CSS  
+- **Backend:** Node.js, Express.js  
+- **Database:** MongoDB (with Mongoose)  
+- **Authentication:** JWT (JSON Web Tokens)  
+- **Payments:** Stripe API (subscriptions + credits)  
 - **AI API:** CLIPDROP (Text-to-Image API)
+
+## 🚀 Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/snapverse.git
+cd snapverse
+
 
 ## 🚀 Getting Started
 
